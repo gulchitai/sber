@@ -38,7 +38,7 @@ namespace MailOrchestra.WebApp
 			//}
 
 
-			LoadJson();
+			//LoadJson();
 
 
 			CreateWebHostBuilder(args).Build().Run();
