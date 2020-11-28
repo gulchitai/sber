@@ -1,16 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MailOrchestra.WebApp.Controllers
 {
 	public class HomeController : Controller
 	{
 
+
+		//[HttpGet("{id}")]
+		[HttpPost()]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		//[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public IActionResult LoadData()
 		{
-			//throw new System.NotImplementedException();
-			var d = 1;
-			d = d + 1;
-			return null;
+			//if (!_repository.TryGetProduct(id, out var product))
+			//{
+			//	return NotFound();
+			//}
+			return Ok();
 		}
+
 	}
+
+
 }

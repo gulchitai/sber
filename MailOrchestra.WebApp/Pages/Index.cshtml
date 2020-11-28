@@ -1,10 +1,25 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Главная";
 }
 
+
+@*@{
+	string[] cities = new string[] { "Лондон", "Париж", "Берлин" };
+	string[] countries = new string[] { "Великобритания", "Франция", "Германия" };
+}
+@using MailOrchestra.WebApp.Helpers*@
+
 <div class="text-center">
-    <h1 class="display-4">Добро пожаловать</h1>
-    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+	<h1 class="display-4">Добро пожаловать</h1>
+
+	@*@Html.CreateList(cities)*@
+
+	@Html.ActionLink("Load data...", "LoadData", "Home", null, null)
+
+	@*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+
+
+
 </div>

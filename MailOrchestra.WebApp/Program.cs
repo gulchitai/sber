@@ -8,12 +8,15 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace MailOrchestra.WebApp
 {
 	public class Program
 	{
+
+
 		public static void Main(string[] args)
 		{
 
@@ -26,11 +29,17 @@ namespace MailOrchestra.WebApp
 			//	.First(c => c.Type == JTokenType.Array && c.Path.Contains("results"))
 			//	.Children<JObject>();
 
-			//foreach (JObject result in resultObjects) {
-			//	foreach (JProperty property in result.Properties()) {
+			//foreach (JObject result in resultObjects)
+			//{
+			//	foreach (JProperty property in result.Properties())
+			//	{
 			//		// do something with the property belonging to result
 			//	}
 			//}
+
+
+			LoadJson();
+
 
 			CreateWebHostBuilder(args).Build().Run();
 

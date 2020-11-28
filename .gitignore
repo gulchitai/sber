@@ -4,3 +4,7 @@
 /MailOrchestra.WebApp/bin
 /MailOrchestra.Core/bin
 /MailOrchestra.Core/obj
+/MailOrchestra.WebApp/Data/outbox.json
+/MailOrchestra.WebApp/Data/inbox.json
+/MailOrchestra.TestApp/obj
+/MailOrchestra.TestApp/bin
