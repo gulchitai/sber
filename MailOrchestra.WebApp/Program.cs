@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using MailOrchestra.WebApp.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -43,11 +44,114 @@ namespace MailOrchestra.WebApp
 			//LoadJson();
 
 			string filepath = @"C:\Users\Grigoriy\Desktop\hakaton\sber\MailOrchestra.WebApp\Data\letters.csv";
-			DataTable res = ConvertCSVtoDataTable(filepath);
+			//DataTable res = ConvertCSVtoDataTable(filepath);
 
-			foreach (var row in res.Rows)
+			//foreach (var row in res.Rows)
+			//{
+			//	var t = row;
+			//}
+
+			using (StreamReader reader = new StreamReader(filepath))
 			{
-				var t = row;
+				//string line; 
+
+				//while (!reader.EndOfStream) 
+				//{
+				//	//Define pattern
+				//	//Regex CSVParser = new Regex(";(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+
+				//	//Separating columns to array
+				//	string[] X = line.Split(";");
+
+				//	/* Do something with X */
+				//}
+
+
+				var cont = reader.ReadToEnd();
+				cont = cont.Replace("\r\n", ";");
+				var items = cont.Split(";");
+
+				
+
+
+
+				var k = 0;
+				foreach (var it in items.Skip(12))
+				{
+					var t = new InboxItem();
+
+					if (k == 0)
+					{
+						t.Num = Convert.ToInt32(it);
+					}
+
+					if (k == 1)
+					{
+						t.From = it;
+					}
+
+					if (k == 2)
+					{
+						t.To = it;
+					}
+
+					if (k == 3)
+					{
+						t.Cc = it;
+					}
+
+
+					if (k == 4)
+					{
+						t.Subj = it;
+					}
+
+					if (k == 5)
+					{
+						t.Napical = it;
+					}
+
+
+					if (k == 6)
+					{
+						t.Otvetil = it;
+					}
+
+					if (k == 7)
+					{
+						t.Date = Convert.ToDateTime(it);
+					}
+
+					if (k == 8)
+					{
+						t.OnlyMe = Convert.ToBoolean(it);
+					}
+
+					if (k == 9)
+					{
+						t.CountMyName = Convert.ToInt32(it);
+					}
+
+					if (k == 10)
+					{
+						t.Ves = Convert.ToDecimal(it);
+					}
+
+					if (k == 11)
+					{
+						t.Strategy = Convert.ToBoolean(it);
+					}
+
+					if (k == 12)
+					{
+						k = 0;
+					}
+
+					else k++;
+				}
+
+				
+
 			}
 
 
@@ -58,27 +162,27 @@ namespace MailOrchestra.WebApp
 		}
 
 
-		public static DataTable ConvertCSVtoDataTable(string strFilePath)
-		{
-			StreamReader sr = new StreamReader(strFilePath);
-			string[] headers = sr.ReadLine().Split(',');
-			DataTable dt = new DataTable();
-			foreach (string header in headers)
-			{
-				dt.Columns.Add(header);
-			}
-			while (!sr.EndOfStream)
-			{
-				string[] rows = Regex.Split(sr.ReadLine(), ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-				DataRow dr = dt.NewRow();
-				for (int i = 0; i < headers.Length; i++)
-				{
-					dr[i] = rows[i];
-				}
-				dt.Rows.Add(dr);
-			}
-			return dt;
-		}
+		//public static DataTable ConvertCSVtoDataTable(string strFilePath)
+		//{
+		//	StreamReader sr = new StreamReader(strFilePath);
+		//	string[] headers = sr.ReadLine().Split(';');
+		//	DataTable dt = new DataTable();
+		//	foreach (string header in headers)
+		//	{
+		//		dt.Columns.Add(header);
+		//	}
+		//	while (!sr.EndOfStream)
+		//	{
+		//		string[] rows = Regex.Split(sr.ReadLine(), ";(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+		//		DataRow dr = dt.NewRow();
+		//		for (int i = 0; i < headers.Length; i++)
+		//		{
+		//			dr[i] = rows[i];
+		//		}
+		//		dt.Rows.Add(dr);
+		//	}
+		//	return dt;
+		//}
 
 
 		// recursively yield all children of json
