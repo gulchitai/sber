@@ -3,10 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1267
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.Core", "MailOrchestra.Core\MailOrchestra.Core.csproj", "{0A5EA5B5-BBD2-4C69-A3FD-550288150BDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.REST", "MailOrchestra.REST\MailOrchestra.REST.csproj", "{1FE4FB34-D797-44B1-9E6A-BC9FF85DA192}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.WebApp", "MailOrchestra.WebApp\MailOrchestra.WebApp.csproj", "{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A5EA5B5-BBD2-4C69-A3FD-550288150BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5EA5B5-BBD2-4C69-A3FD-550288150BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5EA5B5-BBD2-4C69-A3FD-550288150BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5EA5B5-BBD2-4C69-A3FD-550288150BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE4FB34-D797-44B1-9E6A-BC9FF85DA192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE4FB34-D797-44B1-9E6A-BC9FF85DA192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE4FB34-D797-44B1-9E6A-BC9FF85DA192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE4FB34-D797-44B1-9E6A-BC9FF85DA192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
