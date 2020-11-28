@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 
 namespace MailOrchestra.REST
 {
@@ -14,7 +15,24 @@ namespace MailOrchestra.REST
 	{
 		public static void Main(string[] args)
 		{
+
+		
+
+
 			CreateWebHostBuilder(args).Build().Run();
+		}
+
+
+
+		// recursively yield all children of json
+		private static IEnumerable<JToken> AllChildren(JToken json)
+		{
+			foreach (var c in json.Children()) {
+				yield return c;
+				foreach (var cc in AllChildren(c)) {
+					yield return cc;
+				}
+			}
 		}
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

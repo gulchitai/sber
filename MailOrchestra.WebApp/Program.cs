@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -15,20 +16,26 @@ namespace MailOrchestra.WebApp
 	{
 		public static void Main(string[] args)
 		{
+
+			//string json = "{'results':[{'SwiftCode':'','City':'','BankName':'Deutsche    Bank','Bankkey':'10020030','Bankcountry':'DE'},{'SwiftCode':'','City':'10891    Berlin','BankName':'Commerzbank Berlin (West)','Bankkey':'10040000','Bankcountry':'DE'}]}";
+			//StringBuilder json = new StringBuilder();
+			//json.Append(File.ReadAllText(@"C:\Users\Grigoriy\Desktop\hakaton\inbox.json"));
+
+
+			//var resultObjects = AllChildren(JObject.Parse(json.ToString()))
+			//	.First(c => c.Type == JTokenType.Array && c.Path.Contains("results"))
+			//	.Children<JObject>();
+
+			//foreach (JObject result in resultObjects) {
+			//	foreach (JProperty property in result.Properties()) {
+			//		// do something with the property belonging to result
+			//	}
+			//}
+
 			CreateWebHostBuilder(args).Build().Run();
 
 
-
-			var json = File.ReadAllText("../");
-			var resultObjects = AllChildren(JObject.Parse(json))
-				.First(c => c.Type == JTokenType.Array && c.Path.Contains("results"))
-				.Children<JObject>();
-
-			foreach (JObject result in resultObjects) {
-				foreach (JProperty property in result.Properties()) {
-					// do something with the property belonging to result
-				}
-			}
+			
 		}
 
 
