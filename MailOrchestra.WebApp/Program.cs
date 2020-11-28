@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -40,11 +42,42 @@ namespace MailOrchestra.WebApp
 
 			//LoadJson();
 
+			string filepath = @"C:\Users\Grigoriy\Desktop\hakaton\sber\MailOrchestra.WebApp\Data\letters.csv";
+			DataTable res = ConvertCSVtoDataTable(filepath);
+
+			foreach (var row in res.Rows)
+			{
+				var t = row;
+			}
+
 
 			CreateWebHostBuilder(args).Build().Run();
 
 
 			
+		}
+
+
+		public static DataTable ConvertCSVtoDataTable(string strFilePath)
+		{
+			StreamReader sr = new StreamReader(strFilePath);
+			string[] headers = sr.ReadLine().Split(',');
+			DataTable dt = new DataTable();
+			foreach (string header in headers)
+			{
+				dt.Columns.Add(header);
+			}
+			while (!sr.EndOfStream)
+			{
+				string[] rows = Regex.Split(sr.ReadLine(), ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+				DataRow dr = dt.NewRow();
+				for (int i = 0; i < headers.Length; i++)
+				{
+					dr[i] = rows[i];
+				}
+				dt.Rows.Add(dr);
+			}
+			return dt;
 		}
 
 

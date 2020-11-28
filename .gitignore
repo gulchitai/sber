@@ -8,3 +8,10 @@
 /MailOrchestra.WebApp/Data/inbox.json
 /MailOrchestra.TestApp/obj
 /MailOrchestra.TestApp/bin
+/MailOrchestra.WebApp/Data/letters.csv
+/.vs/MailOrchestra/v15/.suo
+/.vs/MailOrchestra/v15/Server/sqlite3/db.lock
+/.vs/MailOrchestra/v15/Server/sqlite3/storage.ide
+/.vs/MailOrchestra/v15/Server/sqlite3/storage.ide-shm
+/.vs/MailOrchestra/v15/Server/sqlite3/storage.ide-wal
+/.vs/config/applicationhost.config
