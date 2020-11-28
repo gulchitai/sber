@@ -19,9 +19,180 @@
 	@*@Html.ActionLink("Load data...", "LoadData", "Home", null, null)*@
 
 	@*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-	
-	
-	<a href="http://mail.ru">test</a>
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div class="accordion" id="accordionExample">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h2 class="mb-0">
+							<button class="btn text-left" type="button" data-toggle="collapse"
+									data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								ПРИОРИТЕТ
+								<i class="fas fa-caret-down"></i>
+							</button>
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+						 data-parent="#accordionExample">
+						<div class="card-body">
+							<a href="index.html">Важные сообщения</a>
+							<a href="plug.html">Делегирование</a>
+							<a href="plug.html">Шаблонный ответ</a>
+							<a href="plug.html">Настройка</a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<button class="btn text-left" type="button" data-toggle="collapse"
+									data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								ПРОБЛЕМЫ
+								<i class="fas fa-caret-down"></i>
+							</button>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+						 data-parent="#accordionExample">
+						<div class="card-body">
+
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h2 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								ТЕГИ
+								<i class="fas fa-caret-down"></i>
+							</button>
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+						 data-parent="#accordionExample">
+						<div class="card-body">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<details class="importantMails" open>
+				<summary> НУЖНО ОБРАТИТЬ ВНИМАНИЕ</summary>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Mark@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Jacob@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+			<details class="unimportantMails">
+				<summary> МОЖНО ОТЛОЖИТЬ</summary>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="mailCheckbox"><input type="checkbox"></td>
+							<td class="mailFrom">Larry@sberbank.ru</td>
+							<td class="mailSubject">
+								Сопровождение АИС<span class="mailPreview">
+									- Просьба приложить
+									в виде инструкции...
+								</span>
+							</td>
+							<td class="mailDate">2019-02-01 09:51:45+00:00</td>
+							<td><input class="star" type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+		</div>
+	</div>
 
 
 </div>

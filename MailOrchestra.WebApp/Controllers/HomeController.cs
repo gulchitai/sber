@@ -20,6 +20,11 @@ namespace MailOrchestra.WebApp.Controllers
 			return Ok();
 		}
 
+		public IActionResult Index()
+		{
+			//throw new System.NotImplementedException();
+			return View();
+		}
 	}
 
 

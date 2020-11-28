@@ -19,40 +19,37 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MailOrchestra.WebApp</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Главная</a>
-                        </li>
-                        @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>*@
-                    </ul>
-                </div>
-            </div>
-        </nav>
+	    <div class="container">
+		    <a href="@Url.Action("Index","Home")" class="logo">СБЕР<span>Оркестр</span></a>
+			<form class="headerSearchForm">
+			    <input type="text" placeholder="Search...">
+			    <button><i class="fas fa-search"></i></button>
+		    </form>
+		    <img class="accountImg" src="images/account.png" alt="account">
+		    <button class="accountBtn">
+			    My Account<i class="fas fa-caret-down"></i>
+		    </button>
+	    </div>
     </header>
     <div class="container">
         <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
+
+		<main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+@*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - MailOrchestra.WebApp 
         </div>
-    </footer>
+    </footer>*@
 
-    <environment include="Development">
+	<footer>
+		<div class="container">2020 &copy; Ibrium</div>
+	</footer>
+
+<environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
