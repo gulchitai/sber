@@ -26,38 +26,38 @@ namespace MailOrchestra.WebbApp
 
 			if (filter == 1)
 			{
-				AttenMenuText = "<b>Важные сообщения</b>";
+				AttenMenuText = "<b>Важно</b>";
 			}
 			else
 			{
-				AttenMenuText = "Важные сообщения";
+				AttenMenuText = "Важно";
 			}
 
 			if (filter == 2)
 			{
-				FastMenuText = "<b>Срочные сообщения</b>";
+				FastMenuText = "<b>Срочно</b>";
 			}
 			else
 			{
-				FastMenuText = "Срочные сообщения";
+				FastMenuText = "Срочно";
 			}
 
 			if (filter == 3)
 			{
-				TemplMenuText = "<b>Шаблонные сообщения</b>";
+				TemplMenuText = "<b>Шаблонные</b>";
 			}
 			else
 			{
-				TemplMenuText = "Шаблонные сообщения";
+				TemplMenuText = "Шаблонные";
 			}
 
 			if (filter == 4)
 			{
-				TrabMenuText = "<b>Сообщения с проблемой</b>";
+				TrabMenuText = "<b>Проблемы</b>";
 			}
 			else
 			{
-				TrabMenuText = "Сообщения с проблемой";
+				TrabMenuText = "Проблемы";
 			}
 
 		}

@@ -82,18 +82,17 @@
 	                            <a href="Default?filter=0"><%= StrategyMenuText %></a>
                                 <a href="Default?filter=1"><%= AttenMenuText %></a>
                                 <a href="Default?filter=2"><%= FastMenuText %></a>
-                                <a href="Default?filter=3"><%= TemplMenuText %></a>
 	                            <a href="Default?filter=4"><%= TrabMenuText %></a>
                                 <a href="Settings">Настройка</a>
                             </div>
                         </div>
                     </div>
-                  <%--  <div class="card">
+                    <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
                                 <button class="btn text-left" type="button" data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    ПРОБЛЕМЫ
+                                    ДЕЛЕГИРОВАНИЕ
                                     <i class="fas fa-caret-down"></i>
                                 </button>
                             </h2>
@@ -101,10 +100,10 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
                             <div class="card-body">
-	                            <a href="Default?filter=4"><%= TrabMenuText %></a>
+	                            <a href="Default?filter=3"><%= TemplMenuText %></a>
                             </div>
                         </div>
-                    </div>--%>
+                    </div>
                 </div>
             </div>
 

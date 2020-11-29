@@ -11747,6 +11747,10 @@ main .row {
 	padding: 60px 0;
 }
 
+	main .row .accordion {
+		margin-bottom: 2px;
+	}
+
 	main .row .card {
 		border: none;
 		border-radius: 0;
@@ -11790,11 +11794,156 @@ main .row {
 		}
 
 			main .row .card .card-body a {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
 				text-decoration: none;
 				font-size: 14px;
 				line-height: 33px;
 				font-weight: 400;
 				color: #6f6e6e;
+			}
+
+	main .row .menu {
+		padding-left: 10px;
+		margin-bottom: 12px;
+	}
+
+		main .row .menu .menuBorder {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			height: 36px;
+			padding-left: 11px;
+			border-top: 1px solid #ebebeb;
+			border-bottom: 1px solid #ebebeb;
+		}
+
+			main .row .menu .menuBorder .menuBar {
+				width: 50%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+			}
+
+	main .row .mail {
+		padding-left: 10px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+		main .row .mail .mailSubject {
+			height: 62px;
+			padding-top: 20px;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 700;
+			border-bottom: 1px solid #ebebeb;
+		}
+
+		main .row .mail .mailHeading {
+			height: 62px;
+			padding-top: 10px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			border-bottom: 1px solid #ebebeb;
+		}
+
+			main .row .mail .mailHeading .mailFromTo {
+				font-size: 14px;
+				font-weight: 400;
+			}
+
+				main .row .mail .mailHeading .mailFromTo a {
+					font-weight: 300;
+					color: #6f6e6e;
+				}
+
+			main .row .mail .mailHeading .mailDate {
+				font-weight: 300;
+				color: #6f6e6e;
+			}
+
+		main .row .mail .mailContainer {
+			padding: 20px 0;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			border-bottom: 1px solid #ebebeb;
+		}
+
+			main .row .mail .mailContainer .mailText {
+				width: 90%;
+				text-align: center;
+			}
+
+		main .row .mail .mailFiles {
+			height: 40px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			border-bottom: 1px solid #ebebeb;
+		}
+
+			main .row .mail .mailFiles a {
+				padding-left: 10px;
+				color: #6f6e6e;
+				font-size: 14px;
+				font-weight: 300;
+			}
+
+		main .row .mail .mailButton {
+			padding-top: 40px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+		}
+
+			main .row .mail .mailButton button {
+				padding-left: 20px;
+				width: 160px;
+				background-color: #ffffff;
+				border: 1px solid #e6e6e6;
+				border-radius: 0px 3px 3px 0px;
+				font-size: 14px;
+				line-height: 32px;
+				color: #a4a4a4;
 			}
 
 	main .row .importantMails, main .row .unimportantMails {
@@ -11809,7 +11958,7 @@ main .row {
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;
-			height: 56px;
+			height: 36px;
 			color: #046a38;
 			font-size: 14px;
 			font-weight: 700;
