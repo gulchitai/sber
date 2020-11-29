@@ -24,7 +24,7 @@
 				                <tr>
 					                <td class="mailCheckbox"><input type="checkbox"></td>
 					                <td class="mailFrom"><%=item.From %></td>
-					                <td class="mailSubject"><%= item.Subj %></span></td>
+					                <td class="mailSubject"><a href="MailEdit.aspx?id=<%= item.Num %>"><%= item.Subj %></a></span></td>
 					                <td class="mailDate"><%=item.Date.ToShortDateString() %></td>
 					                <td><input class="star" type="checkbox"></td>
 				                </tr>

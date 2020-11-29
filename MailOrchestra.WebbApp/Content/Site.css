@@ -11966,6 +11966,8 @@ main .row {
 		}
 
 		main .row .importantMails .table input.star, main .row .unimportantMails .table input.star {
+			width: 20px;
+			height: 36px;
 			font-size: 24px;
 			visibility: hidden;
 			cursor: pointer;
