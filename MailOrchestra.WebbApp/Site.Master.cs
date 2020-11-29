@@ -17,7 +17,7 @@ namespace MailOrchestra.WebbApp
 			
 			if (filter == 0)
 			{
-				StrategyMenuText = "<b>Стратегия</b>";
+				StrategyMenuText = "<b>Стратегия</b>" ;
 			}
 			else
 			{

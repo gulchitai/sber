@@ -79,11 +79,11 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
                             <div class="card-body">
-	                            <a href="Default?filter=0"><%= StrategyMenuText %></a>
-                                <a href="Default?filter=1"><%= AttenMenuText %></a>
-                                <a href="Default?filter=2"><%= FastMenuText %></a>
-	                            <a href="Default?filter=4"><%= TrabMenuText %></a>
-                                <a href="Settings">Настройка</a>
+	                            <a href="Default?filter=0"><%= StrategyMenuText %> <i class="fas fa-chart-line"></i></a>
+                                <a href="Default?filter=1"><%= AttenMenuText %> <i class="fas fa-star"></i></a>
+                                <a href="Default?filter=2"><%= FastMenuText %> <i class="fas fa-clock"></i></a>
+	                            <a href="Default?filter=4"><%= TrabMenuText %> <i class="fas fa-exclamation-triangle"></i></a>
+                                <a href="Settings">Настройка<i class="fas fa-cog"></i></a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
                             <div class="card-body">
-	                            <a href="Default?filter=3"><%= TemplMenuText %></a>
+	                            <a href="Default?filter=3"><%= TemplMenuText %> <i class="fas fa-user-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -112,8 +112,9 @@
 		
 		
 
-        
+	      
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+	           
             </asp:ContentPlaceHolder>
             <%--<hr />--%>
 	        <%--<footer>
