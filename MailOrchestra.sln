@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.REST", "MailO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.WebApp", "MailOrchestra.WebApp\MailOrchestra.WebApp.csproj", "{59D3E1B0-AE5E-4CD3-9D66-72408AD41A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailOrchestra.TestApp", "MailOrchestra.TestApp\MailOrchestra.TestApp.csproj", "{8880873E-082C-4400-9F52-6877F065AF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailOrchestra.TestApp", "MailOrchestra.TestApp\MailOrchestra.TestApp.csproj", "{8880873E-082C-4400-9F52-6877F065AF6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailOrchestra.WebbApp", "MailOrchestra.WebbApp\MailOrchestra.WebbApp.csproj", "{3DE8566C-7524-490E-AEFE-5B4594458142}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8880873E-082C-4400-9F52-6877F065AF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8880873E-082C-4400-9F52-6877F065AF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8880873E-082C-4400-9F52-6877F065AF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE8566C-7524-490E-AEFE-5B4594458142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE8566C-7524-490E-AEFE-5B4594458142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE8566C-7524-490E-AEFE-5B4594458142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE8566C-7524-490E-AEFE-5B4594458142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,22 @@ namespace MailOrchestra.WebApp.Data
 		static DataRepo()
 		{
 			LetterItems=new List<InboxItem>();
+			var item1 = new InboxItem()
+			{
+				Num = 1,
+				From = "from@from.ru",
+				To = "to@to.ru",
+				Cc = "cc@cc.ru",
+				Subj = "subject",
+				Napical = "napical",
+				Otvetil = "otvetil",
+				Date = DateTime.Now,
+				OnlyMe = true,
+				CountMyName = 1,
+				Ves = 0.3,
+				Strategy = true
+			};
+			AddItem(item1);
 		}
 
 		static void AddItem(InboxItem item)

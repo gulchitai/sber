@@ -7,7 +7,6 @@ namespace MailOrchestra.WebApp.Data
 {
 	public class InboxItem
 	{
-		
 			public int Num;
 			public string From;
 			public string To;
@@ -18,7 +17,7 @@ namespace MailOrchestra.WebApp.Data
 			public DateTime Date;
 			public bool OnlyMe;
 			public int CountMyName;
-			public decimal Ves;
+			public double Ves;
 			public bool Strategy;
 
 	}

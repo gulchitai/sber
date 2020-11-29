@@ -1,4 +1,5 @@
 ﻿@page
+@using MailOrchestra.WebApp.Data
 @model IndexModel
 @{
 	ViewData["Title"] = "Главная";
@@ -10,6 +11,7 @@
 	string[] countries = new string[] { "Великобритания", "Франция", "Германия" };
 }
 @using MailOrchestra.WebApp.Helpers*@
+
 
 <div class="text-center">
 	@*<h1 class="display-4">Добро пожаловать</h1>*@
@@ -37,10 +39,11 @@
 					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
 						 data-parent="#accordionExample">
 						<div class="card-body">
-							<a href="index.html">Важные сообщения</a>
-							<a href="plug.html">Делегирование</a>
-							<a href="plug.html">Шаблонный ответ</a>
-							<a href="plug.html">Настройка</a>
+							@Html.ActionLink("Важные сообщения", "Index", "Home", null, null)
+							@Html.ActionLink("Стратегические", "Index", "Home", null, null)
+							@Html.ActionLink("Делегирование", "Index", "Home", null, null)
+							@Html.ActionLink("Шаблонный ответ", "Index", "Home", null, null)
+							@Html.ActionLink("Настройка", "Index", "Home", null, null)
 						</div>
 					</div>
 				</div>

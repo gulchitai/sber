@@ -15,3 +15,5 @@
 /.vs/MailOrchestra/v15/Server/sqlite3/storage.ide-shm
 /.vs/MailOrchestra/v15/Server/sqlite3/storage.ide-wal
 /.vs/config/applicationhost.config
+/MailOrchestra.WebbApp/obj
+/MailOrchestra.WebbApp/bin
