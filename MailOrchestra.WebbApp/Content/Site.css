@@ -11721,8 +11721,9 @@ header {
 				color: #a4a4a4;
 			}
 
-		header .container .accountImg {
+		header .container .microImg {
 			margin-left: auto;
+			padding-right: 20px;
 		}
 
 		header .container .accountBtn {

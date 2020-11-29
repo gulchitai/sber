@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using MailOrchestra.WebbApp.Data;
 
 namespace MailOrchestra.WebbApp
 {
@@ -14,6 +15,7 @@ namespace MailOrchestra.WebbApp
     {
         void Application_Start(object sender, EventArgs e)
         {
+			DataRepo.LoadFromExcel();
             // Code that runs on application startup
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

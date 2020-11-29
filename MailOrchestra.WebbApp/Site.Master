@@ -41,23 +41,18 @@
         </asp:ScriptManager>
 		
 	    <header>
-		    <script type="text/javascript">
-	            function relocate_home()
-	            {
-		            location.href = "Account.aspx";
-	            } 
-            </script>
 		    <div class="container">
-			    <a href="Default" class="logo">СБЕР<span>Оркестр</span></a>
+			    <a href="index.html" class="logo">СБЕР<span>Оркестр</span></a>
 				<div style="margin-left: 150px;">
-			    <form class="headerSearchForm" >
-				    <input type="text" placeholder="Search..."/>
+			    <form class="headerSearchForm">
+				    <input type="text" placeholder="Search...">
 				    <button><i class="fas fa-search"></i></button>
 			    </form>
 				</div>
+			    <img class="microImg" src="images/micro.png" alt="micro">
 			    <img class="accountImg" src="images/account.png" alt="account">
-			    <button class="accountBtn" onclick="relocate_account()">
-				    Конырев Д.<i class="fas fa-caret-down"></i>
+			    <button class="accountBtn">
+				    Корунев Д.<i class="fas fa-caret-down"></i>
 			    </button>
 		    </div>
 	    </header>
