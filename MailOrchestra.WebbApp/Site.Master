@@ -39,11 +39,13 @@
 		
 	    <header>
 		    <div class="container">
-			    <a href="index.html" class="logo">СБЕР<span>Оркестр</span></a>
-			    <form class="headerSearchForm">
+			    <a href="Default" class="logo">СБЕР<span>Оркестр</span></a>
+				<div style="margin-left: 150px;">
+			    <form class="headerSearchForm" >
 				    <input type="text" placeholder="Search..."/>
 				    <button><i class="fas fa-search"></i></button>
 			    </form>
+				</div>
 			    <img class="accountImg" src="images/account.png" alt="account">
 			    <button class="accountBtn">
 				    My Account<i class="fas fa-caret-down"></i>
@@ -51,27 +53,6 @@
 		    </div>
 	    </header>
 
-        <%--<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>--%>
-		
-		
 		    <main class="container">
         <div class="row">
             <div class="col-md-3">
@@ -89,10 +70,10 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="index.html">Важные сообщения</a>
-                                <a href="plug.html">Делегирование</a>
-                                <a href="plug.html">Шаблонный ответ</a>
-                                <a href="plug.html">Настройка</a>
+                                <a href="Default?filter=1">Важные сообщения</a>
+                                <a href="Default?filter=2">Делегирование</a>
+                                <a href="Default?filter=3">Шаблонный ответ</a>
+                                <a href="Default?filter=4">Настройка</a>
                             </div>
                         </div>
                     </div>
@@ -138,15 +119,13 @@
 		
 		
 
-        <%--<div >--%>
+        
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <%--<hr />
-	        <footer>
+            <%--<hr />--%>
+	        <%--<footer>
 		        <div class="container">2020 &copy; Ibrium</div>
 	        </footer>    --%>
-
-        <%--</div>--%>
         </div>
 		    </main>
 

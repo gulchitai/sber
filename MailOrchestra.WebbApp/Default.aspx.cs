@@ -30,6 +30,9 @@ namespace MailOrchestra.WebbApp
 
 	public partial class _Default : Page
 	{
+
+		public List<InboxItem> MailItems;
+
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			string path = @"C:\Users\Grigoriy\Desktop\hakaton\sber\MailOrchestra.WebbApp\Content\letters.xlsx";
@@ -41,8 +44,7 @@ namespace MailOrchestra.WebbApp
 				var row = 2;
 				var allOk = true;
 
-				List<InboxItem>
-					items = new List<InboxItem>(); 
+				MailItems = new List<InboxItem>(); 
 
 				while (allOk)
 				{
@@ -76,7 +78,9 @@ namespace MailOrchestra.WebbApp
 						Ves = Convert.ToDouble(strVes),
 						Strategy = Convert.ToBoolean(Convert.ToInt32(strStrategy))
 					};
-					items.Add(item);
+					MailItems.Add(item);
+
+					
 					
 					allOk = (!string.IsNullOrEmpty(strNum));
 					row += 1;
@@ -88,10 +92,11 @@ namespace MailOrchestra.WebbApp
 			if (Request["filter"] != null)
 				filter = int.Parse(Request["filter"]);
 
-
+			MailItems = MailItems.Take(5).ToList();
 
 
 		}
+
 
 		
 	}
