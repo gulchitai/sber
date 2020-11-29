@@ -11,7 +11,50 @@ namespace MailOrchestra.WebbApp
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			var filter = 1;
+			if (Request["filter"] != null)
+				filter = int.Parse(Request["filter"]);
+			
+			if (filter == 0)
+			{
+				StrategyMenuText = "<b>Стратегия</b>";
+			}
+			else
+			{
+				StrategyMenuText = "Стратегия";
+			}
 
+			if (filter == 1)
+			{
+				AttenMenuText = "<b>Важные сообщения</b>";
+			}
+			else
+			{
+				AttenMenuText = "Важные сообщения";
+			}
+
+			if (filter == 2)
+			{
+				FastMenuText = "<b>Срочные сообщения</b>";
+			}
+			else
+			{
+				FastMenuText = "Срочные сообщения";
+			}
+
+			if (filter == 3)
+			{
+				TemplMenuText = "<b>Шаблонные сообщения</b>";
+			}
+			else
+			{
+				TemplMenuText = "Шаблонные сообщения";
+			}
 		}
+
+		public string StrategyMenuText { get; set; }
+		public object AttenMenuText { get; set; }
+		public object FastMenuText { get; set; }
+		public object TemplMenuText  { get; set; }
 	}
 }

@@ -32,6 +32,7 @@ namespace MailOrchestra.WebbApp
 	{
 
 		public List<InboxItem> MailItems;
+		public string SelectedGroupName { get; set; }
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -92,8 +93,27 @@ namespace MailOrchestra.WebbApp
 			if (Request["filter"] != null)
 				filter = int.Parse(Request["filter"]);
 
-			MailItems = MailItems.Take(5).ToList();
+			if (filter == 0)
+			{
+				
+				MailItems = MailItems.Where(t => t.Strategy).OrderByDescending(t=>t.Date).Take(20).ToList();
+				SelectedGroupName = "Стратегия(" + MailItems.Count() + ")";
 
+			}
+			if (filter == 1)
+			{
+				
+				MailItems = MailItems.OrderByDescending(t=>t.Ves).ThenBy(t=>t.Date).Take(15).ToList();
+				SelectedGroupName = "Важные(" + MailItems.Count() + ")";
+			}
+			if (filter == 2)
+			{
+				SelectedGroupName = "Срочные";
+			}
+			if (filter == 3)
+			{
+				SelectedGroupName = "Шаблонный ответ";
+			}
 
 		}
 

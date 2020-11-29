@@ -48,7 +48,7 @@
 				</div>
 			    <img class="accountImg" src="images/account.png" alt="account">
 			    <button class="accountBtn">
-				    My Account<i class="fas fa-caret-down"></i>
+				    Конырев Д.<i class="fas fa-caret-down"></i>
 			    </button>
 		    </div>
 	    </header>
@@ -70,10 +70,11 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="Default?filter=1">Важные сообщения</a>
-                                <a href="Default?filter=2">Делегирование</a>
-                                <a href="Default?filter=3">Шаблонный ответ</a>
-                                <a href="Default?filter=4">Настройка</a>
+	                            <a href="Default?filter=0"><%= StrategyMenuText %></a>
+                                <a href="Default?filter=1"><%= AttenMenuText %></a>
+                                <a href="Default?filter=2"><%= FastMenuText %></a>
+                                <a href="Default?filter=3"><%= TemplMenuText %></a>
+                                <a href="Settings">Настройка</a>
                             </div>
                         </div>
                     </div>
@@ -94,12 +95,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                   <%-- <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    ТЕГИ
+                                    СТРАТЕГИЯ
                                     <i class="fas fa-caret-down"></i>
                                 </button>
                             </h2>
@@ -110,7 +111,7 @@
 
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
 

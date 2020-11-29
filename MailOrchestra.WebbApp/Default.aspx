@@ -4,7 +4,7 @@
 
 	<div class="col-md-9">
                 <details class="importantMails" open>
-                    <summary> НУЖНО ОБРАТИТЬ ВНИМАНИЕ</summary>
+                    <summary> <%= SelectedGroupName %></summary>
 	                <table class="table">
 	                <tbody>
 			                <% foreach(var item in MailItems){ %>
@@ -19,7 +19,7 @@
 	                </tbody>
 	                </table>
                 </details>
-                <details class="unimportantMails">
+               <%-- <details class="unimportantMails">
                     <summary> МОЖНО ОТЛОЖИТЬ</summary>
                     <table class="table">
                         <tbody>
@@ -49,7 +49,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </details>
+                </details>--%>
             </div>
 
 </asp:Content>
