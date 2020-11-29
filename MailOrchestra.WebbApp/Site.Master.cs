@@ -50,11 +50,22 @@ namespace MailOrchestra.WebbApp
 			{
 				TemplMenuText = "Шаблонные сообщения";
 			}
+
+			if (filter == 4)
+			{
+				TrabMenuText = "<b>Сообщения с проблемой</b>";
+			}
+			else
+			{
+				TrabMenuText = "Сообщения с проблемой";
+			}
+
 		}
 
 		public string StrategyMenuText { get; set; }
 		public object AttenMenuText { get; set; }
 		public object FastMenuText { get; set; }
 		public object TemplMenuText  { get; set; }
+		public object TrabMenuText { get; set; }
 	}
 }

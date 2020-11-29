@@ -34,10 +34,19 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+				
+
+
             </Scripts>
         </asp:ScriptManager>
 		
 	    <header>
+		    <script type="text/javascript">
+	            function relocate_home()
+	            {
+		            location.href = "Account.aspx";
+	            } 
+            </script>
 		    <div class="container">
 			    <a href="Default" class="logo">СБЕР<span>Оркестр</span></a>
 				<div style="margin-left: 150px;">
@@ -47,7 +56,7 @@
 			    </form>
 				</div>
 			    <img class="accountImg" src="images/account.png" alt="account">
-			    <button class="accountBtn">
+			    <button class="accountBtn" onclick="relocate_account()">
 				    Конырев Д.<i class="fas fa-caret-down"></i>
 			    </button>
 		    </div>
@@ -74,11 +83,12 @@
                                 <a href="Default?filter=1"><%= AttenMenuText %></a>
                                 <a href="Default?filter=2"><%= FastMenuText %></a>
                                 <a href="Default?filter=3"><%= TemplMenuText %></a>
+	                            <a href="Default?filter=4"><%= TrabMenuText %></a>
                                 <a href="Settings">Настройка</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                  <%--  <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
                                 <button class="btn text-left" type="button" data-toggle="collapse"
@@ -91,24 +101,7 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
-                            </div>
-                        </div>
-                    </div>
-                   <%-- <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    СТРАТЕГИЯ
-                                    <i class="fas fa-caret-down"></i>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-
+	                            <a href="Default?filter=4"><%= TrabMenuText %></a>
                             </div>
                         </div>
                     </div>--%>

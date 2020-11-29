@@ -25,6 +25,7 @@ namespace MailOrchestra.WebbApp
 		public int CountMyName;
 		public double Ves;
 		public bool Strategy;
+		public bool Problem;
 
 	}
 
@@ -63,6 +64,7 @@ namespace MailOrchestra.WebbApp
 					var strCountMyName = firstWorkSheet.Cells[row, 10].Value?.ToString().Trim();
 					var strVes = firstWorkSheet.Cells[row, 11].Value?.ToString().Trim();
 					var strStrategy = firstWorkSheet.Cells[row, 12].Value?.ToString().Trim();
+					var strProblem = firstWorkSheet.Cells[row, 13].Value?.ToString().Trim();
 
 					var item = new InboxItem()
 					{
@@ -77,7 +79,8 @@ namespace MailOrchestra.WebbApp
 						OnlyMe = Convert.ToBoolean(Convert.ToInt32(strOnlyMe)),
 						CountMyName = Convert.ToInt32(strCountMyName),
 						Ves = Convert.ToDouble(strVes),
-						Strategy = Convert.ToBoolean(Convert.ToInt32(strStrategy))
+						Strategy = Convert.ToBoolean(Convert.ToInt32(strStrategy)),
+						Problem = Convert.ToBoolean(Convert.ToInt32(strProblem))
 					};
 					MailItems.Add(item);
 
@@ -114,6 +117,12 @@ namespace MailOrchestra.WebbApp
 			if (filter == 3)
 			{
 				SelectedGroupName = "Шаблонный ответ";
+			}
+
+			if (filter == 4)
+			{
+				MailItems = MailItems.Where(t=>t.Problem).OrderByDescending(t=>t.Date).Take(5).ToList();
+				SelectedGroupName = "Сообщения с проблемой(" + MailItems.Count() + ")";
 			}
 
 		}
