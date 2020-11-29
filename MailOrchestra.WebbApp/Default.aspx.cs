@@ -108,7 +108,8 @@ namespace MailOrchestra.WebbApp
 			}
 			if (filter == 2)
 			{
-				SelectedGroupName = "Срочные";
+				MailItems = MailItems.Where(t=>t.OnlyMe).OrderByDescending(t=>t.CountMyName).ThenBy(t=>t.Date).Take(10).ToList();
+				SelectedGroupName = "Срочные("+ MailItems.Count() + ")";
 			}
 			if (filter == 3)
 			{
